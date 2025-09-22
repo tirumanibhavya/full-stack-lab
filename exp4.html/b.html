@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Combinator Selectors</title>
+    <style>
+        /* descendant selector */
+        div p { color: blue; }
+
+        /* child selector */
+        div > p { border: 1px solid black; }
+
+        /* adjacent sibling selector */
+        h2 + p { color: orange; }
+
+        /* general sibling selector */
+        h2 ~ p { font-style: italic; }
+    </style>
+</head>
+<body>
+    <h1>Combinator Selectors Example</h1>
+    <div>
+        <p>This paragraph is a direct child of div.</p>
+        <span><p>This one is inside a span but still a descendant of div.</p></span>
+    </div>
+
+    <h2>Combinators in Action</h2>
+    <p>This paragraph comes immediately after h2 (adjacent sibling).</p>
+    <p>This paragraph also follows h2 but not directly (general sibling).</p>
+</body>
+</html>
