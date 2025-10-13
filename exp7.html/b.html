@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Window Object Example</title>
+<script>
+function showWindowDetails() {
+  var innerWidth = window.innerWidth;
+  var innerHeight = window.innerHeight;
+  var outerWidth = window.outerWidth;
+  var outerHeight = window.outerHeight;
+  var locationHref = window.location.href;
+
+  alert("Window Inner Width: " + innerWidth + "px\n" +
+        "Window Inner Height: " + innerHeight + "px\n" +
+        "Window Outer Width: " + outerWidth + "px\n" +
+        "Window Outer Height: " + outerHeight + "px\n" +
+        "Current URL: " + locationHref);
+
+  var resizeConfirm = confirm("Do you want to resize the window to 800x600?");
+  if (resizeConfirm) {
+    window.resizeTo(800, 600);
+    alert("Window resized to 800x600.");
+  }
+
+  var userMessage = prompt("Enter a message to display on the page:", "Hello World!");
+  if (userMessage) {
+    var para = document.createElement("p");
+    para.textContent = userMessage;
+    document.body.appendChild(para);
+  }
+}
+
+window.onload = showWindowDetails;
+</script>
+</head>
+<body>
+</body>
+</html>

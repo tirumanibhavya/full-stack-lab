@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Armstrong Number Check</title>
+<script>
+function isArmstrong(number) {
+  var sum = 0;
+  var temp = number;
+  var digitsCount = number.toString().length;
+
+  while (temp > 0) {
+    var remainder = temp % 10;
+    sum += Math.pow(remainder, digitsCount);
+    temp = Math.floor(temp / 10);
+  }
+  
+  return sum === number;
+}
+
+window.onload = function() {
+  var input = parseInt(prompt("Enter a positive integer:"));
+  if (isNaN(input) || input <= 0) {
+    alert("Please enter a valid positive integer.");
+    return;
+  }
+  if (isArmstrong(input)) {
+    alert(input + " is an Armstrong number.");
+    document.getElementById("result").innerHTML = input + " is an Armstrong number.";
+  } else {
+    alert(input + " is not an Armstrong number.");
+    document.getElementById("result").innerHTML = input + " is not an Armstrong number.";
+  }
+};
+</script>
+</head>
+<body>
+<h2>Armstrong Number Check Result</h2>
+<div id="result"></div>
+</body>
+</html>

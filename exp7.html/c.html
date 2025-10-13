@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Array Object Properties and Methods</title>
+<script>
+window.onload = function() {
+  var fruits = ["Banana", "Orange", "Apple", "Mango"];
+  var length = fruits.length;
+  var fruitsString = fruits.toString();
+  fruits.push("Lemon");
+  var lastElement = fruits.pop();
+  var indexApple = fruits.indexOf("Apple");
+  var hasMango = fruits.includes("Mango");
+  fruits.forEach(function(value, index) {
+    console.log(index + ": " + value);
+  });
+  var output = "Array length: " + length + "\n" +
+               "Array as string: " + fruitsString + "\n" +
+               "Removed last element: " + lastElement + "\n" +
+               "Index of Apple: " + indexApple + "\n" +
+               "Array contains Mango: " + hasMango;
+  alert(output);
+};
+</script>
+</head>
+<body>
+</body>
+</html>

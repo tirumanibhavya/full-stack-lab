@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>JavaScript String Object Example</title>
+<script>
+window.onload = function() {
+  var str = "Hello World!";
+
+  var length = str.length;
+  var upper = str.toUpperCase();
+  var lower = str.toLowerCase();
+  var indexOfW = str.indexOf('W');
+  var lastIndexOfL = str.lastIndexOf('l');
+  var charAt5 = str.charAt(5);
+  var sliced = str.slice(0, 5);
+  var replaced = str.replace("World", "JavaScript");
+  var splitArray = str.split(" ");
+  var trimmed = "   Hello Trim!   ".trim();
+
+  var output = "<p>Original String: " + str + "</p>" +
+               "<p>Length: " + length + "</p>" +
+               "<p>Uppercase: " + upper + "</p>" +
+               "<p>Lowercase: " + lower + "</p>" +
+               "<p>Index of 'W': " + indexOfW + "</p>" +
+               "<p>Last index of 'l': " + lastIndexOfL + "</p>" +
+               "<p>Character at index 5: " + charAt5 + "</p>" +
+               "<p>Sliced string (0-5): " + sliced + "</p>" +
+               "<p>Replaced string: " + replaced + "</p>" +
+               "<p>Split string by space: " + splitArray.join(", ") + "</p>" +
+               "<p>Trimmed string: '" + trimmed + "'</p>";
+
+  document.body.innerHTML = output;
+};
+</script>
+</head>
+<body>
+</body>
+</html>

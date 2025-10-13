@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JavaScript Output Methods Demo</title>
+</head>
+<body>
+  <h2>JavaScript Output Demo</h2>
+
+  <p id="output"></p>
+
+  <button onclick="displayOutputs()">Show Outputs</button>
+
+  <script>
+    function displayOutputs() {
+      alert("This is an alert box!");
+
+      console.log("This message appears in the console.");
+
+
+      document.getElementById("output").innerHTML = "This text is shown using innerHTML!";
+
+
+    }
+  </script>
+</body>
+</html>

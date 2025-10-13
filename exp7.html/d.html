@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>JavaScript Math Object Example</title>
+<script>
+window.onload = function() {
+  var euler = Math.E;
+  var pi = Math.PI;
+  var sqrt2 = Math.SQRT2;
+  var sqrtHalf = Math.SQRT1_2;
+  var naturalLog2 = Math.LN2;
+  var naturalLog10 = Math.LN10;
+  var log2e = Math.LOG2E;
+
+  var absValue = Math.abs(-7.25);
+  var ceilValue = Math.ceil(4.4);
+  var floorValue = Math.floor(4.7);
+  var roundValue = Math.round(4.5);
+  var randomValue = Math.random();
+  var powValue = Math.pow(3, 4);
+  var sqrtValue = Math.sqrt(16);
+  var truncValue = Math.trunc(4.9);
+
+  var output = "<p>Math.E: " + euler + "</p>" +
+               "<p>Math.PI: " + pi + "</p>" +
+               "<p>Math.SQRT2: " + sqrt2 + "</p>" +
+               "<p>Math.SQRT1_2: " + sqrtHalf + "</p>" +
+               "<p>Math.LN2: " + naturalLog2 + "</p>" +
+               "<p>Math.LN10: " + naturalLog10 + "</p>" +
+               "<p>Math.LOG2E: " + log2e + "</p>" +
+               "<p>Math.abs(-7.25): " + absValue + "</p>" +
+               "<p>Math.ceil(4.4): " + ceilValue + "</p>" +
+               "<p>Math.floor(4.7): " + floorValue + "</p>" +
+               "<p>Math.round(4.5): " + roundValue + "</p>" +
+               "<p>Math.random(): " + randomValue + "</p>" +
+               "<p>Math.pow(3,4): " + powValue + "</p>" +
+               "<p>Math.sqrt(16): " + sqrtValue + "</p>" +
+               "<p>Math.trunc(4.9): " + truncValue + "</p>";
+
+  document.body.innerHTML = output;
+};
+</script>
+</head>
+<body>
+</body>
+</html>

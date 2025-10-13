@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Largest of Three Numbers</title>
+<script>
+function findLargest() {
+  var num1 = parseInt(prompt("Enter first integer:"));
+  var num2 = parseInt(prompt("Enter second integer:"));
+  var num3 = parseInt(prompt("Enter third integer:"));
+
+  if (num1 === num2 && num2 === num3) {
+    alert("EQUAL NUMBERS");
+    document.getElementById("result").innerHTML = "EQUAL NUMBERS";
+  } else {
+    var largest = num1;
+    if (num2 > largest) largest = num2;
+    if (num3 > largest) largest = num3;
+
+    alert(largest + " LARGER NUMBER");
+    document.getElementById("result").innerHTML = largest + " LARGER NUMBER";
+  }
+}
+</script>
+</head>
+<body onload="findLargest()">
+<h2>Result:</h2>
+<div id="result"></div>
+</body>
+</html>

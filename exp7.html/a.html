@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document Object Properties and Methods</title>
+</head>
+<body>
+    <h2 id="heading">Welcome to JavaScript Document Object Demo</h2>
+    <p id="info">This paragraph shows document object properties and methods in action.</p>
+
+    <button onclick="showDocumentProperties()">Show Document Properties</button>
+    <button onclick="changeContent()">Change Content</button>
+    <button onclick="addElements()">Add New Element</button>
+    <div id="output"></div>
+    <script>
+        function showDocumentProperties() {
+            let output = "<h3>Document Object Properties</h3>";
+            output += "<ul>";
+            output += "<li>Document Title: " + document.title + "</li>";
+            output += "<li>Document URL: " + document.URL + "</li>";
+            output += "<li>Document Last Modified: " + document.lastModified + "</li>";
+            output += "<li>Number of Links: " + document.links.length + "</li>";
+            output += "<li>Number of Images: " + document.images.length + "</li>";
+            output += "</ul>";
+            document.getElementById("output").innerHTML = output;
+        }
+        function changeContent() {
+            document.getElementById("heading").innerText = "Content Changed Using JavaScript";
+            document.getElementById("info").innerHTML = "The content and heading above were changed through <code>document.getElementById()</code>.";
+        }
+        function addElements() {
+            let newPara = document.createElement("p");
+            newPara.textContent = "This paragraph was added dynamically using document.createElement() and appendChild().";
+            document.body.appendChild(newPara);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JavaScript Input Methods Demo</title>
+</head>
+<body>
+  <h2>JavaScript Input Demo</h2>
+  
+  <button onclick="takePromptInput()">Prompt Input</button>
+  <p id="promptResult"></p>
+  
+  <form onsubmit="return takeFormInput();">
+    <label for="formName">Enter your name:</label>
+    <input type="text" id="formName" name="formName">
+    <button type="submit">Submit</button>
+  </form>
+  <p id="formResult"></p>
+  
+  <label for="liveInput">Type something (live update):</label>
+  <input type="text" id="liveInput">
+  <p id="liveResult"></p>
+  
+  <script>
+    function takePromptInput() {
+      let name = prompt("Please enter your name:", "User");
+      if (name !== null) {
+        document.getElementById('promptResult').innerHTML = "Hello, " + name + "!";
+      }
+    }
+
+    function takeFormInput() {
+      let input = document.getElementById('formName').value;
+      document.getElementById('formResult').innerHTML = "You entered: " + input;
+      return false; 
+    }
+
+    
+    document.getElementById('liveInput').addEventListener('input', function() {
+      document.getElementById('liveResult').innerHTML = "Live: " + this.value;
+    });
+  </script>
+</body>
+</html>

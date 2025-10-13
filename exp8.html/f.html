@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Currency Denomination</title>
+<script>
+function calculateDenominations(amount) {
+  var denominations = [100, 50, 20, 10, 5, 2, 1];
+  var count = {};
+  
+  for (var i = 0; i < denominations.length; i++) {
+    count[denominations[i]] = Math.floor(amount / denominations[i]);
+    amount = amount % denominations[i];
+  }
+  return count;
+}
+
+window.onload = function() {
+  var amount = parseInt(prompt("Enter the deposited amount in Rs:"));
+  if (isNaN(amount) || amount <= 0) {
+    alert("Please enter a valid positive amount.");
+    return;
+  }
+  
+  var counts = calculateDenominations(amount);
+  var output = amount + " can be broken down into:<br>";
+  
+  for (var denom in counts) {
+    if (counts[denom] > 0) {
+      output += counts[denom] + " - " + denom + "'s<br>";
+    }
+  }
+  
+  document.body.innerHTML = output;
+  alert(output.replace(/<br>/g, "\n"));
+};
+</script>
+</head>
+<body>
+</body>
+</html>

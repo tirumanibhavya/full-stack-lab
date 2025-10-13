@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>User-defined Object Example</title>
+<script>
+function Person(firstName, lastName, age) {
+  this._firstName = firstName;
+  this._lastName = lastName;
+  this._age = age;
+
+  this.getFullName = function() {
+    return this._firstName + ' ' + this._lastName;
+  };
+
+  this.display = function() {
+    return `Name: ${this.getFullName()}, Age: ${this._age}`;
+  };
+}
+
+Object.defineProperty(Person.prototype, 'age', {
+  get: function() {
+    return this._age;
+  },
+  set: function(newAge) {
+    if(newAge > 0 && newAge < 150) {
+      this._age = newAge;
+    } else {
+      alert('Invalid age');
+    }
+  },
+  enumerable: true
+});
+
+window.onload = function() {
+  const person1 = new Person('John', 'Doe', 30);
+
+  let output = '';
+  output += '<h2>User-defined Object Details</h2>';
+  output += '<p>' + person1.display() + '</p>';
+
+  person1.age = 35;
+  output += '<p>After modifying age using setter – Age: ' + person1.age + '</p>';
+
+  document.body.innerHTML = output;
+};
+</script>
+</head>
+<body>
+</body>
+</html>

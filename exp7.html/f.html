@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>JavaScript RegExp Object Example</title>
+<script>
+window.onload = function() {
+  var pattern = /hello/i;
+  var str1 = "Hello World!";
+  var str2 = "JavaScript is fun.";
+
+  var test1 = pattern.test(str1);
+  var test2 = pattern.test(str2);
+
+  var execResult = pattern.exec(str1);
+
+  var replaced = str1.replace(pattern, "Hi");
+
+  var output = "<p>Test 'Hello World!': " + test1 + "</p>" +
+               "<p>Test 'JavaScript is fun.': " + test2 + "</p>" +
+               "<p>Exec on 'Hello World!': " + (execResult ? execResult[0] : "No match") + "</p>" +
+               "<p>Replaced string: " + replaced + "</p>" +
+               "<p>Pattern source: " + pattern.source + "</p>" +
+               "<p>Ignore case: " + pattern.ignoreCase + "</p>" +
+               "<p>Global search: " + pattern.global + "</p>";
+  
+  document.body.innerHTML = output;
+};
+</script>
+</head>
+<body>
+</body>
+</html>

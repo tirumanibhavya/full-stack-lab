@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Object Iteration with Loops</title>
+<script>
+window.onload = function() {
+  const person = {
+    name: "Alice",
+    age: 25,
+    city: "New York"
+  };
+
+  let output = "<h3>Using for-in loop:</h3>";
+  for (let key in person) {
+    if (person.hasOwnProperty(key)) {
+      output += key + ": " + person[key] + "<br>";
+    }
+  }
+
+  output += "<h3>Using forEach loop:</h3>";
+  Object.keys(person).forEach(function(key) {
+    output += key + ": " + person[key] + "<br>";
+  });
+
+  output += "<h3>Using for-of loop:</h3>";
+  for (const [key, value] of Object.entries(person)) {
+    output += key + ": " + value + "<br>";
+  }
+
+  document.body.innerHTML = output;
+};
+</script>
+</head>
+<body>
+</body>
+</html>

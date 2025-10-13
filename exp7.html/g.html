@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>JavaScript Date Object Example</title>
+<script>
+window.onload = function() {
+  var now = new Date();
+
+  var year = now.getFullYear();
+  var month = now.getMonth() + 1;
+  var date = now.getDate();
+  var day = now.getDay();
+  var hours = now.getHours();
+  var minutes = now.getMinutes();
+  var seconds = now.getSeconds();
+
+  now.setFullYear(2025);
+  now.setMonth(11);
+  now.setDate(25);
+
+  var output = "<p>Current Date and Time: " + (new Date()).toString() + "</p>" +
+               "<p>Year: " + year + "</p>" +
+               "<p>Month: " + month + "</p>" +
+               "<p>Date: " + date + "</p>" +
+               "<p>Day of week: " + day + "</p>" +
+               "<p>Hours: " + hours + "</p>" +
+               "<p>Minutes: " + minutes + "</p>" +
+               "<p>Seconds: " + seconds + "</p>" +
+               "<p>Modified Date: " + now.toString() + "</p>";
+
+  document.body.innerHTML = output;
+};
+</script>
+</head>
+<body>
+</body>
+</html>
+

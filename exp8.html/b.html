@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Weekday Using Switch Case</title>
+<script>
+function displayWeekday() {
+  var dayNum = parseInt(prompt("Enter a number (1-7) to get the day of the week:"));
+  var dayName;
+  switch (dayNum) {
+    case 1:
+      dayName = "Monday";
+      break;
+    case 2:
+      dayName = "Tuesday";
+      break;
+    case 3:
+      dayName = "Wednesday";
+      break;
+    case 4:
+      dayName = "Thursday";
+      break;
+    case 5:
+      dayName = "Friday";
+      break;
+    case 6:
+      dayName = "Saturday";
+      break;
+    case 7:
+      dayName = "Sunday";
+      break;
+    default:
+      dayName = "Invalid number";
+  }
+  alert(dayName);
+  document.getElementById("result").innerHTML = dayName;
+}
+</script>
+</head>
+<body onload="displayWeekday()">
+<h2>Weekday Result:</h2>
+<div id="result"></div>
+</body>
+</html>

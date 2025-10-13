@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Print Numbers 1 to 10</title>
+<script>
+window.onload = function() {
+  var output = "<h3>Using for loop:</h3>";
+  for (var i = 1; i <= 10; i++) {
+    output += i + " ";
+  }
+
+  output += "<h3>Using while loop:</h3>";
+  var j = 1;
+  while (j <= 10) {
+    output += j + " ";
+    j++;
+  }
+
+  output += "<h3>Using do-while loop:</h3>";
+  var k = 1;
+  do {
+    output += k + " ";
+    k++;
+  } while (k <= 10);
+
+  document.body.innerHTML = output;
+};
+</script>
+</head>
+<body>
+</body>
+</html>
